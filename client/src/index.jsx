@@ -30,19 +30,11 @@ class App extends React.Component {
       <div>
         <Nav />
         <h1>TEST APP main routing is completed</h1>
-        <Main />
-        <div>Nav Goes Here</div>
-        <DebateFloor />
-        <div>Chat Goes Here</div>
-
-        <h1>TEST APP</h1>
-        <Chatview />
-
         <Switch>
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={DebateFloor}/>
           <Route path="/" component={Main}/>
-          <DebateFloor />
+          
           <div>Chat Goes Here</div>
           
           <div>Sample Login</div>
