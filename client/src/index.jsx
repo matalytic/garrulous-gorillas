@@ -40,9 +40,8 @@ class App extends React.Component {
 
         <Switch>
           <Route path="/login" component={Login}/>
-          <Route path="/signup" component={SignUp}/>
+          <Route path="/signup" component={DebateFloor}/>
           <Route path="/" component={Main}/>
-          <Main />
           <DebateFloor />
           <div>Chat Goes Here</div>
           

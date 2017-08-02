@@ -6,10 +6,17 @@ class DebateFloor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      argumentsPro: ['These are my feeeeeeeeeelings', 'Here are moreeeee feeeeelings', 'I LOVEEEEEE IT'],
-      argumentsCon: ['You are wrong', 'OBJECTTTTIONNNNNNNNN', 'I HATEEEEEEEE THATTTTTT'],
+      argumentsPro: ['These are my feeeeeeeeeelings', 'Here are moreeeee feeeeelings', 'I LOVEEEEEE IT', 'Clearly you are mistake. I CANNOT BELIEVE THIS'],
+      argumentsCon: ['You are wrong', 'OBJECTTTTIONNNNNNNNN', 'I HATEEEEEEEE THATTTTTT', 'We do not believe in such savage ideas'],
+      votesPro: 5,
+      votesCon: 11,
     }
+    this.handleVote = this.handleVote.bind(this);
 
+  };
+
+  handleVote() {
+    
   }
 
   componentWillMount() {
@@ -24,10 +31,12 @@ class DebateFloor extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>Topic</div>
-        <Position position="Pro" arguments={this.state.argumentsPro} points="10" />
-        <Position position="Con" arguments={this.state.argumentsCon} points="7" />
+      <div className="container">
+        <div className="Row">
+          <div>Topic</div>
+          <Position position="Pro" arguments={this.state.argumentsPro} points={this.state.votesPro} />
+          <Position position="Con" arguments={this.state.argumentsCon} points={this.state.votesCon} />
+        </div>
       </div>
       )
   }
